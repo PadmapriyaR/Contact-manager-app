@@ -1,0 +1,55 @@
+<view title="'Contacts'">
+
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="searchKey">
+            <button class="button button-clear" ng-click="clearSearch()">X</button>
+        </label>
+        <button class="button button-calm" ng-click="search()">Search</button>
+        <!--<button class="button button-clear" href="#/addlist">Add</button>-->
+        <!--<button class="button button-icon" ng-click="toggleProjects()">
+           <i class="icon ion-navicon"></i>
+          </button>-->
+    </div>
+    <!--<ion-floating-button click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" iconColor="#fff">
+    </ion-floating-button>-->
+
+    <content has-header="true" has-subheader="true">
+        <button style="float:right;" class="button button-icon" ng-click="newtask()">
+            <i class="icon ion-compose"></i>
+          </button>
+        <list>
+            <item ng-repeat="employee in employees" type="item-text-wrap" href="#/employee/{{employee.id}}">
+                <h3>{{employee.firstName}} {{employee.lastName}}</h3>
+                <p>{{employee.cellPhone}}</p>
+            </item>
+            </item>
+        </list>
+    </content>
+        <!--<script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Contact</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">First Name</span>
+              <input ng-model="newUser.firstName" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Last Name</span>
+              <input ng-model="newUser.lastName" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input ng-model="newUser.email" type="text">
+            </label>
+            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>
+    </script>-->
+</view>
